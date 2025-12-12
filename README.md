@@ -31,8 +31,9 @@ graph LR
         Worker --> |物理剪辑| FFmpeg["视频渲染引擎"]
     end
     
-    FFmpeg --> |回传成品| MinIO
-✨ 核心特性 (Features)
+flowchart LR
+A -->|回传成品| minio["MinIO✨ 核心特性（特征）⚡"]
+
 ⚡ 极致性能 ASR：弃用了低效的本地 Whisper 模型，集成 Groq API (Whisper-large-v3)，实现 100x 实时倍速的语音转录，解决本地显存瓶颈。
 
 🧠 智能语义分析：接入 DeepSeek-V3 大模型，精准理解上下文，智能去除 "呃、那个" 等口语废话。
