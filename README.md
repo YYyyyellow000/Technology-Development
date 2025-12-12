@@ -48,7 +48,6 @@ flowchart LR
     Worker -- 回传成品 --> MinIO
 ```
 
-> ✅ 说明：这里把你原来单独写的 `A -- 回传成品 --> minio[...]` 合并到了同一张架构图里，避免在一个 Mermaid 代码块里出现第二个 `flowchart/graph` 入口导致 GitHub 解析失败。
 
 ---
 
