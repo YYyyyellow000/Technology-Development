@@ -19,16 +19,16 @@
 ```mermaid
 graph LR
     User[客户端] --> |上传/查询| API[FastAPI 网关]
-    API --> |元数据| MySQL[(MySQL 8.0)]
-    API --> |视频文件| MinIO[(MinIO 对象存储)]
-    API --> |任务分发| Redis[(Redis 消息队列)]
+    API --> |元数据| MySQL[("MySQL 8.0")]
+    API --> |视频文件| MinIO[("MinIO 对象存储")]
+    API --> |任务分发| Redis[("Redis 消息队列")]
     
     Redis --> Worker[Celery 异步工人]
     
     subgraph "AI 处理引擎 (Worker)"
-        Worker --> |极速听写| Groq[Groq API (Whisper-v3)]
-        Worker --> |语义分析| DeepSeek[SiliconFlow API]
-        Worker --> |物理剪辑| FFmpeg[视频渲染引擎]
+        Worker --> |极速听写| Groq["Groq API (Whisper-v3)"]
+        Worker --> |语义分析| DeepSeek["SiliconFlow API"]
+        Worker --> |物理剪辑| FFmpeg["视频渲染引擎"]
     end
     
     FFmpeg --> |回传成品| MinIO
